@@ -1,0 +1,235 @@
+:root {
+    --main-color: #333333;
+    --secondary-color: #000000;
+    --font-family: Arial, sans-serif;
+    --main-content: #d3d3d3;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2e8f0;
+    margin: 0;
+    background-color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    margin: 0;
+    background-color: #334155;
+    color: white;
+    text-align: center;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+
+#course-title {
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    
+}
+
+
+nav {
+    margin-top: 55px;
+    background-color: #1e293b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.75rem;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgb(225, 225, 225, 0.2);
+}
+
+
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+h1 {
+
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #0f172a;
+}
+
+
+.card {
+    background: #cbd5e1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    text-align: center;
+    background-color: #94a3b8;
+    color: #0f172a;
+    padding: 0.5rem;
+    margin-top: 0;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.profile-img {
+    float: right;
+    width: 120px;
+    height: auto;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.flag-img {
+    float: left;
+    width: 130px;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+.card ul{
+    
+    margin: 0;
+    padding-left: 1.5rem;
+
+}
+
+.card:has(ul){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card.card:has(ul) h2{
+    margin-top: 0;
+    padding-left: 1.5rem;
+}
+
+.card:has(ul) ul{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    justify-content: center;
+    padding-left: 1.75rem;
+}
+
+.card ul{
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.card ul li {
+    margin-bottom: 0.75rem;
+}
+
+.card li{
+    margin-bottom: 0.75rem;
+}
+
+.card a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.card a:hover{
+    text-decoration: underline;
+}
+
+.location-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem;
+    text-decoration: underline;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.flag-figure{
+    float: left;
+    width: 130px;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
+}
+
+.flag-figure img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    display: block;
+}
+
+.flag-figure figcaption{
+    font-size: 0.8rem;
+    color: #475569;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    background-color: #334155;
+    color: white;
+    padding: 1.2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: #38bdf8;
+    font-size: 0.9rem;
+}
+
+@media(max-width:768px){
+    main{
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
