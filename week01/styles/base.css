@@ -1,14 +1,14 @@
 :root {
-    --primary-color:#334155;
-    --secondary-color:#1e293b;
-    --accent-color:#2563eb;
-    --highlight-color:#38bdf8;
-    --text-dark:#0f172a;
-    --text-muted:#475569;
-    --card-bg:#cbd5e1;
-    --card-header-bg:#94a3b8;
-    --body-bg:#e2e8f0;
-    --white:#ffffff;
+    --primary-color: #334155;
+    --secondary-color: #1e293b;
+    --accent-color: #2563eb;
+    --highlight-color: #38bdf8;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --card-bg: #cbd5e1;
+    --card-header-bg: #94a3b8;
+    --body-bg: #e2e8f0;
+    --white: #ffffff;
 
     /*Typography*/
     --font-family: "Quicksand", sans-serif;
@@ -47,7 +47,7 @@ header {
     display: block;
     font-size: 1.4rem;
     font-weight: bold;
-    
+
 }
 
 
@@ -140,14 +140,15 @@ h1 {
     line-height: 1.6;
     margin: 0;
 }
-.card ul{
-    
+
+.card ul {
+
     margin: 0;
     padding-left: 1.5rem;
 
 }
 
-.card:has(ul){
+.card:has(ul) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -155,12 +156,12 @@ h1 {
     box-sizing: border-box;
 }
 
-.card.card:has(ul) h2{
+.card.card:has(ul) h2 {
     margin-top: 0;
     padding-left: 1.5rem;
 }
 
-.card:has(ul) ul{
+.card:has(ul) ul {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -169,7 +170,7 @@ h1 {
     padding-left: 1.75rem;
 }
 
-.card ul{
+.card ul {
     margin: 0;
     padding-left: 1.5rem;
 }
@@ -178,7 +179,7 @@ h1 {
     margin-bottom: 0.75rem;
 }
 
-.card li{
+.card li {
     margin-bottom: 0.75rem;
 }
 
@@ -187,7 +188,7 @@ h1 {
     text-decoration: none;
 }
 
-.card a:hover{
+.card a:hover {
     text-decoration: underline;
 }
 
@@ -200,11 +201,11 @@ h1 {
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
-    color: #1e293b;
+    color: var(--secondary-color);
     clear: both;
 }
 
-.location-heading::after{
+.location-heading::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -216,7 +217,7 @@ h1 {
     border-radius: 2px;
 }
 
-.flag-figure{
+.flag-figure {
     float: left;
     width: 130px;
     margin-right: 1.25rem;
@@ -226,7 +227,7 @@ h1 {
     text-align: center;
 }
 
-.flag-figure img{
+.flag-figure img {
     width: 100%;
     height: auto;
     border-radius: 4px;
@@ -234,7 +235,7 @@ h1 {
     display: block;
 }
 
-.flag-figure figcaption{
+.flag-figure figcaption {
     font-size: 0.8rem;
     color: #475569;
     margin-top: 0.25rem;
@@ -254,8 +255,8 @@ footer p {
     font-size: 0.9rem;
 }
 
-@media(max-width:768px){
-    main{
+@media(max-width:768px) {
+    main {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
