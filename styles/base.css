@@ -141,13 +141,6 @@ h1 {
     margin: 0;
 }
 
-.card ul {
-
-    margin: 0;
-    padding-left: 1.5rem;
-
-}
-
 .card:has(ul) {
     display: flex;
     flex-direction: column;
@@ -158,8 +151,22 @@ h1 {
 
 .card.card:has(ul) h2 {
     margin-top: 0;
-    padding-left: 1.5rem;
 }
+
+.card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card ul li,
+.card li {
+    margin-bottom: 0.75rem;
+}
+
 
 .card:has(ul) ul {
     display: flex;
@@ -170,22 +177,11 @@ h1 {
     padding-left: 1.75rem;
 }
 
-.card ul {
-    margin: 0;
-    padding-left: 1.5rem;
-}
-
-.card ul li {
-    margin-bottom: 0.75rem;
-}
-
-.card li {
-    margin-bottom: 0.75rem;
-}
 
 .card a {
     color: var(--accent-color);
     text-decoration: none;
+    font-weight: 600;
 }
 
 .card a:hover {
@@ -196,7 +192,6 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: 1.05rem;
-    text-decoration: none;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     position: relative;
