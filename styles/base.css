@@ -250,6 +250,16 @@ footer p {
     font-size: 0.9rem;
 }
 
+footer .footer-modified {
+    color: var(--white);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+footer .footer-modified span {
+    color: var(--white);
+}
+
 @media(max-width:768px) {
     main {
         grid-template-columns: 1fr;
