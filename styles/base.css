@@ -1,7 +1,7 @@
 :root {
     --primary-color: #334155;
     --secondary-color: #1e293b;
-    --accent-color: #0547fc;
+    --accent-color: #0452fb;
     --highlight-color: #38bdf8;
     --text-dark: #0f172a;
     --text-muted: #475569;
@@ -156,13 +156,12 @@ h1 {
     box-sizing: border-box;
 }
 
-.card:has(ul) h2 {
+.card.card:has(ul) h2 {
     margin-top: 0;
     padding-left: 1.5rem;
 }
 
-.card:has(ul) ul,
-.card {
+.card:has(ul) ul {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -171,8 +170,16 @@ h1 {
     padding-left: 1.75rem;
 }
 
-.card ul li,
 .card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.card ul li {
+    margin-bottom: 0.75rem;
+}
+
+.card li {
     margin-bottom: 0.75rem;
 }
 
