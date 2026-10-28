@@ -156,12 +156,13 @@ h1 {
     box-sizing: border-box;
 }
 
-.card.card:has(ul) h2 {
+.card:has(ul) h2 {
     margin-top: 0;
     padding-left: 1.5rem;
 }
-/*
-.card:has(ul) ul {
+
+.card:has(ul) ul,
+.card {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -169,17 +170,9 @@ h1 {
     justify-content: center;
     padding-left: 1.75rem;
 }
-*/
+
+.card ul li,
 .card ul {
-    margin: 0;
-    padding-left: 1.5rem;
-}
-
-.card ul li {
-    margin-bottom: 0.75rem;
-}
-
-.card li {
     margin-bottom: 0.75rem;
 }
 
