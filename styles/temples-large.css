@@ -1,0 +1,38 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #menu {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        display: block;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+    }
+
+    main {
+        max-width: 1200px;
+    }
+
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
