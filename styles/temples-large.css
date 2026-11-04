@@ -1,37 +1,45 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+@media only screen and (min-width: 32rem) {
+    header {
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1rem 2rem;
     }
 
-    to {
-        opacity: 1;
+    h1{
+        white-space: nowrap;
+        margin: 0;
     }
-}
 
-@media screen and (min-width:768px) {
     #menu {
         display: none;
     }
 
     nav {
-        position: static;
-        display: block;
-        width: auto;
-        background-color: transparent;
+        display: block !important;
+        flex-direction: row;
+        align-items: center;
     }
 
     .navigation {
+        display: flex;
         flex-direction: row;
+        justify-content:flex-end;
+        align-items: center;
+        gap: 1rem;
+        margin: 0;
     }
 
-    .navigation li a {
-        padding: 0.5rem 1rem;
+    .navigation a {
+        min-width: 80px;
     }
 
-    main {
-        max-width: 1200px;
+    .res-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
 
+@media only screen and (min-width: 60rem) {
     .res-grid {
         grid-template-columns: repeat(3, 1fr);
     }

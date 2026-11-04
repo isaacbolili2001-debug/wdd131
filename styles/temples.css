@@ -29,8 +29,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-   flex-wrap: wrap;
-   position: static;
+    flex-wrap: wrap;
+    position: static;
 }
 
 
@@ -88,19 +88,23 @@ nav.open {
 }
 
 main {
-    max-width: 800px;
-    margin: 1.5rem auto;
-    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:  1rem;
 }
 
 .res-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 h2 {
     text-align: center;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
 
 }
 
