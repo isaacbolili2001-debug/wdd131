@@ -51,14 +51,12 @@ header {
 }
 
 nav {
-
     top: 100%;
     left: 0;
     width: 100%;
-
     display: none;
     z-index: 100;
-    box-sizing: 0 4px 6px rgb(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.3);
 }
 
 nav.open {
