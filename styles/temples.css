@@ -35,7 +35,7 @@ header {
 
 
 #menu {
-    font-size: 1.8;
+    font-size: 1.8rem;
     color: var(--white);
     text-decoration: none;
     padding: 0.5rem;
@@ -51,14 +51,14 @@ header {
 }
 
 nav {
-    
+
     top: 100%;
     left: 0;
     width: 100%;
-    
+
     display: none;
     z-index: 100;
-    box-sizing: 0 4px 6px rgb(0,0,0,0.3);
+    box-sizing: 0 4px 6px rgb(0, 0, 0, 0.3);
 }
 
 nav.open {
@@ -90,7 +90,7 @@ nav.open {
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding:  1rem;
+    padding: 1rem;
 }
 
 .res-grid {
@@ -125,8 +125,8 @@ figure img {
 
 figcaption {
     padding: 0.75rem;
-    font-size: 700;
-    color: var(--primary-color)
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 footer {
