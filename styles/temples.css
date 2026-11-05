@@ -27,14 +27,17 @@ header {
     padding: 1rem;
 }
 
-.header-content{
+.header-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-h1{
+
+h1 {
     margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
 }
 
 
@@ -108,7 +111,8 @@ h2 {
     font-size: 1.75rem;
     color: var(--primary-color);
     letter-spacing: 1px;
-
+    font-weight: 600;
+    margin: 1.5rem 0 2rem 0;
 }
 
 figure {
