@@ -59,11 +59,13 @@ nav {
     left: 0;
     width: 100%;
     display: none;
+    flex-direction: column;
     z-index: 100;
 }
 
 nav.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation {
