@@ -1,9 +1,7 @@
 @media only screen and (min-width: 32rem) {
-    header {
-        justify-content: space-around;
+    .header-content{
+        justify-content: flex-start;
         flex-wrap: nowrap;
-        align-items: center;
-        padding: 1rem 2rem;
     }
 
     h1{
