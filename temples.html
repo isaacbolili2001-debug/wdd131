@@ -13,43 +13,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <script  src="scripts/temples.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-content">
             <h1>Temple Album</h1>
-            <a href="#" id="menu" aria-label="Navigation Menu"></a>
+            <button id="menu" aria-label="open navigation menu" aria-expanded="false" aria-controls="navigation">
+                ☰
+            </button>
         </div>
-        <nav>
-            
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
+        <nav class="navigation" id="navigation">
+            <a href="#">Home</a>
+            <a href="#old">Old</a>
+            <a href="#new">New</a>
+            <a href="#large">Large</a>
+            <a href="#small">Small</a>
         </nav>
     </header>
 
     <main>
         <h2>Home</h2>
         <div class="res-grid">
-            <figure>
+            <figure id="old">
                 <img src="images/salt-lake-temple.webp" alt="Temple Placeholder 1" loading="lazy">
                 <figcaption>Salt Lake Temple</figcaption>
             </figure>
-            <figure>
+            <figure id="new">
                 <img src="images/provo-utah-temple.webp" alt="Temple Placeholder 2" loading="lazy">
                 <figcaption>Provo Utah Temple</figcaption>
             </figure>
-            <figure>
+            <figure id="large">
                 <img src="images/washington-temple.webp" alt="Temple Placeholder 3" loading="lazy">
                 <figcaption>Washington D.C. Temple</figcaption>
             </figure>
-            <figure>
+            <figure id="small">
                 <img src="images/rome-italy-temple.webp" alt="Temple Placeholder 4" loading="lazy">
                 <figcaption> Rome Italy Temple</figcaption>
             </figure>

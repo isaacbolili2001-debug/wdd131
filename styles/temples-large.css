@@ -4,17 +4,12 @@
         flex-wrap: nowrap;
     }
 
-    h1{
-        white-space: nowrap;
-        margin: 0;
-    }
 
     #menu {
         display: none;
     }
 
     nav {
-        display: block !important;
         flex-direction: row;
         align-items: center;
     }

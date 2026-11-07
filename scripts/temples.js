@@ -1,9 +1,15 @@
-const hambutton = document.querySelector('#menu');
-const navigation = document.querySelector('nav');
+const hambutton = document.querySelector("#menu");
+const navigation = document.querySelector("#navigation");
 
 hambutton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hambutton.classList.toggle('open');
+    const isOpen = navigation.classList.toggle("open");
+
+    hambutton.textContent = isOpen ? "✕" : "☰";
+    hambutton.setAttribute("aria-expanded", isOpen);
+    hambutton.setAttribute(
+        "aria-label",
+        isOpen ? "close navigation" : "open navigation menu"
+    );
 });
 
 const currentYear = document.querySelector('#currentyear');
@@ -14,10 +20,12 @@ currentYear.textContent = today.getFullYear();
 
 lastModified.textContent = `Last Modification: ${document.lastModified}`;
 
-const navLinks = document.querySelectorAll('.navigation a');
+const navLinks = document.querySelectorAll("a");
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navigation.classList.remove('open');
-        hambutton.classList.remove('open');
+        navigation.classList.remove("open");
+        hambutton.textContent = "☰";
+        hambutton.setAttribute("aria-expanded", "false");
+        hambutton.setAttribute("arial-lebel", "open navigation menu");
     });
 });
