@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Democratic Republic of the Congo | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Democratic Republic of the Congo</h1>
+    </header>
+    <main>
+        <section class="hero" aria-label="Lanscape of the Democratic Republic of the Congo">
+            <picture>
+                <source media="(max-width:600px)" src="images/freiberg-germany-temple.webp" srcset="images/freiberg-germany-temple.webp 900w,
+                    images/congo.webp 1400w,
+                    images/congo.webp 1800w">
+                <img src="images/congo.webp" alt="Democratic republic of the Congo" sizes="100vw"
+                    width="1800" height="1000">
+            </picture>
+        </section>
+        <div class="content-grid">
+            <section class="info-card data-card">
+                <h2>About the DRC</h2>
+                <div class="card-content">
+                    <p><strong>Official name:</strong> Democratic Republic of the Congo</p>
+                    <p><strong>Capital:</strong> Kinshasa</p>
+                    <p><strong>Official language:</strong> French</p>
+                    <p><strong>Currency:</strong> Congolese franc (CDF)</p>
+                    <p><strong>Independence:</strong> June 30, 1960</p>
+                    <p><strong>Major rivers:</strong> Congo River</p>
+                </div>
+            </section>
+
+            <section class="info-card weather-card">
+                <h2>Weather <span class="weather-emoji" arial-hidden="tru">⛅</span></h2>
+                <div class="weather-mobile-icon">
+                    <img src="images/weather.svg" alt="" width="64" height="64">
+                </div>
+                <div class="card-content">
+                    <p><strong>Location:</strong> Kinshasa</p>
+                    <p><strong>Temperature:</strong> <span id="temperature">29</span> °C</p>
+                    <p><strong>Conditions:</strong> Partly cloudy</p>
+                    <p><strong>Wind:</strong> <span id="wind-speed">12</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                </div>
+            </section>
+        </div>
+        <section class="intro">
+            <h2>Discover the Heart of Africa</h2>
+            <p>
+                The Democratic Republic of the Congo is a large country in Central Africa,
+                known for its rich natural resources, cultural diversity, and remarkable
+                biodiversity. The Congo River flows through the country, while the Congo
+                Basin contains one of the world's largest tropical rainforests. From the
+                busy streets of Kinshasa to the mountains and national parks in the east,
+                the DRC has extraordinary places to discover.
+            </p>
+        </section>
+        <footer id="site-footer">
+            <p>&copy; <span id="current-year"></span>🧘 Isaac Bolili Bakambala 🧘 Democratic Republic of the Congo</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </footer>
+    </main>
+</body>
+
+</html>

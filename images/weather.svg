@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Partly cloudy weather icon">
+  <circle cx="43" cy="19" r="12" fill="#f7c843"/>
+  <g fill="#dceef8" stroke="#0077b6" stroke-width="2">
+    <path d="M17 48h31a9 9 0 0 0 0-18 13 13 0 0 0-25-3 10 10 0 0 0-6 21z"/>
+  </g>
+</svg>
