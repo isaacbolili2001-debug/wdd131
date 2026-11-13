@@ -51,7 +51,8 @@ header h1{
 
 header h1::after{
     content: "";
-    display: 85px;
+    width: 85px;
+    display: block;
     height: 4px;
     margin: 12px auto 0;
     background-color: linear-gradient(
@@ -129,7 +130,7 @@ main{
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgb(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
 }
 
@@ -155,8 +156,8 @@ main{
     background-color: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.78);
-    box-shadow: 0 5px 18 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 127, 255, 0.15);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
 }
 
 .weather-card h2{
