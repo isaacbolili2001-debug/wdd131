@@ -127,12 +127,6 @@ main {
     min-width: 0;
 }
 
-.res-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-}
 
 .res-grid section {
     background-color: var(--white);
