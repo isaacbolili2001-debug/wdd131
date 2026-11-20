@@ -26,7 +26,7 @@ navLinks.forEach(link => {
         navigation.classList.remove("open");
         hambutton.textContent = "☰";
         hambutton.setAttribute("aria-expanded", "false");
-        hambutton.setAttribute("arial-lebel", "open navigation menu");
+        hambutton.setAttribute("aria-lebel", "open navigation menu");
     });
 });
 
@@ -107,8 +107,17 @@ const temples = [
     }
 ];
 
-function createTempleCard() {
-    temples.forEach(temple => {
+createTempleCard(temples);
+
+const nonutahLink = document.querySelector("#nonutah");
+nonutahLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    createTempleCard(temples.filter(temples => !temples.location.includes("Utah")));
+});
+
+function createTempleCard(filteredTemples) {
+    document.querySelector(".res-grid").innerHTML = "";
+    filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -133,5 +142,3 @@ function createTempleCard() {
         document.querySelector(".res-grid").append(card);
     });
 }
-
-createTempleCard();

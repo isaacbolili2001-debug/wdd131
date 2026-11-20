@@ -6,7 +6,7 @@
     --white: #ffffff;
     --gray-light: #ddd;
     --gray-dark: #bdc3c7;
-    --font-family: 'Roboto', sans-serif;
+    --font-family: 'Quicksand', sans-serif;
 }
 
 * {
@@ -23,9 +23,13 @@ body {
 }
 
 header {
+    top: 0;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem;
+    position: sticky;
+    z-index: 10;
+    box-sizing: 0 2px 8px rgb(0, 0, 0, 0.25);
 }
 
 .header-content {
@@ -40,6 +44,15 @@ h1 {
     margin: 0;
     font-size: 1.75rem;
     font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 1.5rem 0 2rem 0;
 }
 
 #menu {
@@ -95,7 +108,9 @@ footer p {
 
 main {
     width: 100%;
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0 1rem;
     flex: 1;
 }
 
@@ -116,7 +131,49 @@ main {
     width: 100%;
     height: auto;
     display: block;
+
 }
+
+.res-grid section {
+    background-color: var(--white);
+    border-radius: 12px;
+    border-top: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    padding: 1rem 1rem 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.res-grid section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.res-grid h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.res-grid p {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.label {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.res-grid img {
+    display: block;
+    width: calc(100% + 2rem);
+    margin: 1rem -1rem 0;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
 
 #currentyear {
     color: var(--secondary-color);
