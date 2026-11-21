@@ -129,7 +129,7 @@ oldLink.addEventListener("click", (event) => {
     createTempleCard(temples.filter(temple => getYear(temple.dedicated) < 1900));
 });
 
-nawLink.addEventListener("click", (event) => {
+newLink.addEventListener("click", (event) => {
     event.preventDefault();
     createTempleCard(temples.filter(temples => getYear(temples.dedicated) > 2000));
 });
