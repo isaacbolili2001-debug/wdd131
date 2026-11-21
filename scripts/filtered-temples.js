@@ -109,7 +109,41 @@ const temples = [
 
 createTempleCard(temples);
 
-const nonutahLink = document.querySelector("#nonutah");
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
+
+function getYear(dedicatedString) {
+    return parseInt(dedicatedString.split(",")[0].trim(), 10);
+}
+
+homeLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    createTempleCard(temples);
+});
+
+oldLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    createTempleCard(temples.filter(temple => getYear(temple.dedicated) < 1900));
+});
+
+navLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    createTempleCard(temples.filter(temples => getYear(temples.dedicated) > 2000));
+});
+
+largeLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+smallLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
 nonutahLink.addEventListener("click", (event) => {
     event.preventDefault();
     createTempleCard(temples.filter(temples => !temples.location.includes("Utah")));
