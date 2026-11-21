@@ -26,7 +26,7 @@ navLinks.forEach(link => {
         navigation.classList.remove("open");
         hambutton.textContent = "☰";
         hambutton.setAttribute("aria-expanded", "false");
-        hambutton.setAttribute("aria-lebel", "open navigation menu");
+        hambutton.setAttribute("aria-label", "open navigation menu");
     });
 });
 
@@ -129,7 +129,7 @@ oldLink.addEventListener("click", (event) => {
     createTempleCard(temples.filter(temple => getYear(temple.dedicated) < 1900));
 });
 
-navLink.addEventListener("click", (event) => {
+nawLink.addEventListener("click", (event) => {
     event.preventDefault();
     createTempleCard(temples.filter(temples => getYear(temples.dedicated) > 2000));
 });
