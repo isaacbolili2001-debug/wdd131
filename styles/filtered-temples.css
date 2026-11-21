@@ -16,7 +16,9 @@
 }
 
 body {
-    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
@@ -33,12 +35,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 auto;
 }
 
 h1 {
-    margin: 0;
     font-size: 1.75rem;
     font-weight: 700;
 }
@@ -59,11 +62,14 @@ h2 {
     cursor: pointer;
     background: transparent;
     margin-left: auto;
+    cursor: pointer;
+
 }
 
 nav {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .navigation {
@@ -71,6 +77,7 @@ nav {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .navigation.open {
@@ -111,28 +118,31 @@ main {
     flex: 1;
 }
 
-.res-grid {
-    --gap: 1.2rem;
-    --min-card: 16rem;
+.res-grid{
     display: grid;
-    gap: var(--gap);
-    grid-template-columns: repeat(auto-fill,
-            minmax(max(var(--min-card), calc((100% - 2 * var(--gap)) / 3)), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1.2rem;
+    width: 100%;
 }
 
+/*prevent grid children from overflowing*/
 .res-grid>* {
     min-width: 0;
 }
 
 
 .res-grid section {
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     border-radius: 12px;
     border-top: 5px solid var(--secondary-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     overflow: hidden;
     padding: 1rem 1rem 0;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+        transform 0.25s ease, 
+        box-shadow 0.25s ease;
 }
 
 .res-grid section:hover {
@@ -158,13 +168,11 @@ main {
 
 .res-grid img {
     display: block;
-    width: calc(100% + 2rem);
-    margin: 1rem -1rem 0;
+    width: 100%;
+    margin: auto;
     height: auto;
     aspect-ratio: 16 / 10;
-    object-fit: cover;
 }
-
 
 #currentyear {
     color: var(--secondary-color);
@@ -174,41 +182,43 @@ main {
     color: var(--gray-dark);
 }
 
-
-@media only screen and (min-width: 32rem) {
-    .header-content {
-        justify-content: flex-start;
+/*tablet*/
+@media screen and (min-width: 32rem) {
+    .header-content{
         flex-wrap: nowrap;
     }
 
-
-    #menu {
+    #menu{
         display: none;
     }
 
-    nav {
+    nav{
         flex-direction: row;
         align-items: center;
+        width: auto;
+        margin-left: auto;
     }
 
-    .navigation {
+    .navigation{
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
         gap: 1rem;
         margin: 0;
+        width: auto;
     }
 
     .navigation a {
-        min-width: 80px;
+        min-height: 80px;
     }
 
-    .res-grid {
+    .res-grid{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
+/*desktop*/
 @media only screen and (min-width: 60rem) {
     .res-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
