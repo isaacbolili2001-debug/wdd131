@@ -144,10 +144,7 @@ smallLink.addEventListener("click", (event) => {
     createTempleCard(temples.filter(temple => temple.area < 10000));
 });
 
-nonutahLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    createTempleCard(temples.filter(temples => !temples.location.includes("Utah")));
-});
+
 
 function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
