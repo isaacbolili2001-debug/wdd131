@@ -38,7 +38,7 @@ header {
     flex-wrap: wrap;
     max-width: 1300px;
     width: 100%;
-    padding: 0 auto;
+    margin: 0 auto;
 }
 
 h1 {
@@ -56,14 +56,15 @@ h2 {
 }
 
 #menu {
-    font-size: 1.5rem;
+    display: block;
+    font-size: 1.8rem;
     color: var(--white);
     border: none;
     cursor: pointer;
     background: transparent;
     margin-left: auto;
     cursor: pointer;
-
+    padding: 0.5rem;
 }
 
 nav {
