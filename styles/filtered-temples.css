@@ -124,6 +124,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
     gap: 1.2rem;
     width: 100%;
+    min-height: 24rem;
 }
 
 /*prevent grid children from overflowing*/
