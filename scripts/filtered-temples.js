@@ -147,8 +147,10 @@ smallLink.addEventListener("click", (event) => {
 
 
 function createTempleCard(filteredTemples) {
-    document.querySelector(".res-grid").innerHTML = "";
-    filteredTemples.forEach(temple => {
+    const grid = document.querySelector(".res-grid");
+    grid.innerHTML = "";
+
+    filteredTemples.forEach((temple, index) => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -164,12 +166,18 @@ function createTempleCard(filteredTemples) {
         img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
 
+        if (index === 0) {
+            img.setAttribute("fetchpriority", "high");
+        } else {
+            img.setAttribute("loading", "lazy");
+        }
+
         card.appendChild(name);
         card.appendChild(location);
         card.appendChild(dedication);
         card.appendChild(area);
         card.appendChild(img);
 
-        document.querySelector(".res-grid").append(card);
+        grid.append(card);
     });
 }
