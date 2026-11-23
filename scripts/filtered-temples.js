@@ -164,7 +164,8 @@ function createTempleCard(filteredTemples) {
         area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy");
+        img.setAttribute("width", "400");
+        img.setAttribute("height", temple.templeName === "Payson Utah" ? "225" : "250");
 
         if (index === 0) {
             img.setAttribute("fetchpriority", "high");
