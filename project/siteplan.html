@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Website planning document for Explore DRC, an informational guide to the cities, populations, languages, and cultures of the Democratic Republic of the Congo.">
+    <meta name="author" content="Isaac Bolili Bakambala">
+    <title>Site Plan | Explore DRC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <h1>Explore DRC - Website Planning Document</h1>
+        <p>WDD 131 Project Plan | Isaac Bolili Bakambala</p>
+    </header>
+
+    <main>
+        <!-- 1. SITE NAME -->
+        <section>
+            <h2>1. Site Name</h2>
+            <p><strong>Explore DRC</strong> (<em>exploredrc.org</em>)</p>
+            <p>
+                <strong>Reason for Selection:</strong> This name is short, memorable, and immediately communicates the
+                site's mission—inviting both local Congolese visitors and international learners to discover the
+                geography, major cities, demographics, languages, and rich cultural heritage of the Democratic Republic
+                of the Congo.
+            </p>
+        </section>
+
+        <!-- 2. Site Purpose-->
+
+        <section>
+            <p>
+                Explore DRC serves as an interactive cultural and demographic hub for the Democratic Republic of the
+                Congo. The website provides structured profiles of major Congolese cities (such as Kinshasa, Lubumbashi,
+                Goma, Mbuji-Mayi, and Kisangani), population insights, an overview of official and national languages
+                (French, Lingala, Kikongo, Swahili, and Tshiluba), cultural traditions, and a visitor feedback/inquiry
+                form.
+            </p>
+        </section>
+
+        <!-- 3. Scenarios-->
+        <section>
+            <h2>3. Scenarios</h2>
+            <ul>
+                <li>Which major cities in the DRC have the largest populations, and what are their primary spoken
+                    languages?</li>
+                <li>What are the four national languages of the Democratic Republic of the Congo, and in which regions
+                    are they spoken?</li>
+                <li>How can I filter Congolese cities by region or province to learn about their local culture and
+                    landmarks?</li>
+            </ul>
+        </section>
+
+        <!-- 4. Color Schema-->
+        <section>
+            <h2>4. Color Schema</h2>
+            <p>Adapted directly from the national DRC palette used in my Country/Place project:</p>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="swatch dark-blue"></div>
+                    <p><strong>Dark Blue:</strong> <code>#003b70</code></p>
+                    <p>Used for main headings (<code>h1</code>, <code>h2</code>), strong text, and the footer
+                        background.</p>
+                </div>
+                <div class="color-card">
+                    <div class="swatch drc-blue"></div>
+                    <p><strong>DRC Blue:</strong> <code>#007fff</code></p>
+                    <p>Used for card section accents, buttons, and the first band of the tri-color flag border.</p>
+                </div>
+                <div class="color-card">
+                    <div class="swatch drc-yellow"></div>
+                    <p><strong>DRC Yellow:</strong> <code>#f7d618</code></p>
+                    <p>Used for accent borders, highlights, and the center band of the tri-color flag border.</p>
+                </div>
+                <div class="color-card">
+                    <div class="swatch drc-red"></div>
+                    <p><strong>DRC Red:</strong> <code>#ce1021</code></p>
+                    <p>Used sparingly for alerts, interactive hover states, and the final band of the tri-color border.
+                    </p>
+                </div>
+                <div class="color-card">
+                    <div class="swatch neutral"></div>
+                    <p><strong>Neutrals:</strong> <code>#f4f4f4</code> &amp; <code>#222</code></p>
+                    <p>Light gray page background (<code>#f4f4f4</code>), white cards (<code>#fff</code>), and dark
+                        charcoal body text (<code>#222</code>).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Typography-->
+        <section>
+            <h2>5. Typography</h2>
+            <ul>
+                <li><strong>Headings (<code>Merriweather</code>, serif):</strong> Used for the site title, hero banners,
+                    and section headings (<code>h1</code>, <code>h2</code>, <code>h3</code>) to give an authoritative,
+                    editorial feel.</li>
+                <li><strong>Body &amp; Navigation (<code>Open Sans</code>, sans-serif):</strong> Used for paragraphs,
+                    city data cards, tables, navigation links, and forms for clean legibility across mobile and desktop
+                    screens.</li>
+            </ul>
+        </section>
+
+        <!-- 6. WIREFRAMES -->
+        <section>
+            <h2>6. Wireframes</h2>
+            <p>Home page layout blueprints for mobile and desktop viewports:</p>
+            <div class="wireframe-container">
+                <div class="wireframe-box">
+                    <h3>Mobile View (375px)</h3>
+                    <pre class="wireframe-ascii">
+        +-----------------------+
+        | [Logo] Explore DRC [=]|
+        |===Tri-Color Border====|
+        +-----------------------+
+        |      HERO IMAGE       |
+        |  "Discover the Heart  |
+        |      of Africa"       |
+        |   [Explore Cities]    |
+        +-----------------------+
+        |   Quick DRC Stats     |
+        |  (Pop / Lang / Area)  |
+        +-----------------------+
+        |   Featured City 1     |
+        +-----------------------+
+        |   Featured City 2     |
+        +-----------------------+
+        |  Languages Overview   |
+        +-----------------------+
+        |===Tri-Color Border====|
+        |        Footer         |
+        +-----------------------+
+                  </pre>
+                </div>
+
+                <div class="wireframe-box">
+                    <h3>Desktop View (1024px+)</h3>
+                    <pre class="wireframe-ascii">
+        +-----------------------------------------------+
+        | [Logo] Explore DRC    Home | Cities | Culture |
+        |===============Tri-Color Border================|
+        +-----------------------------------------------+
+        |                 HERO BANNER                   |
+        |        "Discover the Heart of Africa"         |
+        |              [Explore Cities]                 |
+        +-----------------------------------------------+
+        |  [Population Stat] [Languages] [26 Provinces] |
+        +-----------------------------------------------+
+        |  [City Card 1]  [City Card 2]  [City Card 3]  |
+        +-----------------------------------------------+
+        |   National Languages   |   Cultural Highlight |
+        +-----------------------------------------------+
+        |===============Tri-Color Border================|
+        |                    Footer                     |
+        +-----------------------------------------------+
+                  </pre>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Explore DRC | Isaac Bolili Bakambala | WDD 131</p>
+        </footer>
+    </main>
+</body>
+
+</html>
