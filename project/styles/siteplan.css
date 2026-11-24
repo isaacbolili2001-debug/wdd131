@@ -8,61 +8,66 @@
     --white: #fff;
 }
 
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+body{
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     background-color: var(--light-background);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Header matching your place.css style */
-header {
+/*Header matching place.css style*/
+
+header{
     background-color: var(--white);
     text-align: center;
     padding: 1.5rem 1rem;
     border-bottom: 12px solid;
-    border-image: linear-gradient(to right,
-            var(--drc-blue) 0%,
-            var(--drc-blue) 33.33%,
-            var(--drc-yellow) 33.33%,
-            var(--drc-yellow) 66.66%,
-            var(--drc-red) 66.66%,
-            var(--drc-red) 100%) 1;
+    border-image: linear-gradient(
+        to right,
+        var(--drc-blue) 0%,
+        var(--drc-blue) 33.33%,
+        var(--drc-yellow) 33.33%,
+        var(--drc-yellow) 66.66%,
+        var(--drc-red) 66.66%,
+        var(--drc-red) 100%
+    ) 1;
 }
 
-header h1 {
+header h1{
     font-family: 'Merriweather', serif;
-    color: var(--dark-blue);
+    color:var(--dark-blue);
     font-size: 1.85rem;
     margin-bottom: 0.3rem;
 }
 
-header p {
+header p{
     color: var(--text-color);
     font-weight: 600;
 }
 
-header p::after {
+header p::after{
     content: "";
     width: 90px;
     display: block;
     height: 4px;
     margin: 12px auto 0;
-    background: linear-gradient(to right,
-            var(--drc-blue),
-            var(--drc-yellow),
-            var(--drc-red));
+    background: linear-gradient(
+        to right,
+        var(--drc-blue),
+        var(--drc-yellow),
+        var(--drc-red)
+    );
     border-radius: 4px;
 }
 
-/* Main Content */
-main {
+/*Main content*/
+main{
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
@@ -70,109 +75,108 @@ main {
     gap: 1.5rem;
 }
 
-section {
+section{
     background-color: var(--white);
     padding: 1.5rem;
     border-radius: 6px;
-    border-left: 7px solid var(--drc-blue);
+    border-left: 7px 12px var(--drc-blue);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 h2,
-h3 {
+h3{
     font-family: 'Merriweather', serif;
     color: var(--dark-blue);
 }
 
-h2 {
+h2{
     margin-bottom: 0.75rem;
     padding-bottom: 0.35rem;
     border-bottom: 3px solid var(--drc-yellow);
 }
 
-strong {
+strong{
     color: var(--dark-blue);
 }
 
-ul {
+ul{
     padding-left: 1.5rem;
 }
 
-li {
+li{
     margin-bottom: 0.5rem;
 }
 
-/* Color Swatches */
-.color-grid {
+/*Color Swatches*/
+.color-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.color-card {
+.color-card{
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 0.75rem;
+    padding: 0.78rem;
     background-color: var(--light-background);
 }
 
-.swatch {
+.swatch{
     height: 48px;
     border-radius: 4px;
     margin-bottom: 0.5rem;
     border: 1px solid #ccc;
 }
 
-.swatch.dark-blue {
+.swatch.dark-blue{
     background-color: var(--dark-blue);
 }
 
-.swatch.drc-blue {
+.swatch.drc-blue{
     background-color: var(--drc-blue);
 }
 
-.swatch.drc-yellow {
+.swatch.drc-yellow{
     background-color: var(--drc-yellow);
 }
 
-.swatch.drc-red {
+.swatch.drc-red{
     background-color: var(--drc-red);
 }
 
-.swatch.neutral {
+.swatch.neutral{
     background: linear-gradient(90deg, var(--light-background) 50%, var(--white) 50%);
 }
 
-/* Wireframes */
-.wireframe-container {
+/*wireframe*/
+.wireframe-containter{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
 }
 
-.wireframe-box {
+
+.wireframe-box{
     background-color: var(--light-background);
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
 
-.wireframe-ascii {
+.wireframe-ascii{
     font-family: monospace;
     font-size: 0.8rem;
     overflow-x: auto;
-    margin-top: 0.5rem;
-    line-height: 1.3;
+    margin-top: 1.3rem;
+    line-height: 1.3rem;
     color: var(--text-color);
 }
 
-/* Footer matching your place.css style */
-footer {
+footer{
     background-color: var(--dark-blue);
     color: var(--white);
-    text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
     font-size: 0.95rem;
@@ -183,6 +187,7 @@ footer {
         var(--drc-blue) 33.33%,
         var(--drc-yellow) 33.33%,
         var(--drc-yellow) 66.66%,
-        var(--drc-red) 66.66%,
-        var(--drc-red) 100%) 1;
+        var(--drc-red)66.66%,
+        var(--drc-red) 100%
+    ) 1;
 }
