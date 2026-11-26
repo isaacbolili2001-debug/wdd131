@@ -35,19 +35,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Soft tri-color DRC atmospheric background gradient */
     background: linear-gradient(135deg,
-            var(--bg-page-top) 0%,
-            var(--bg-page-mid) 50%,
-            var(--bg-page-bottom) 100%);
+        var(--bg-page-top) 0%,
+        var(--bg-page-mid) 50%,
+        var(--bg-page-bottom) 100%);
 }
 
+
 header {
-    /* DRC diagonal sash-inspired linear gradient (Deep Blue -> Sky Blue -> Red) */
     background: linear-gradient(115deg,
-            var(--drc-blue-navy) 0%,
-            var(--drc-blue-deep) 58%,
-            var(--drc-red-dark) 100%);
+        var(--drc-blue-navy) 0%,
+        var(--drc-blue-deep) 58%,
+        var(--drc-red-dark) 100%);
     color: #ffffff;
     text-align: center;
     padding: 1.35rem 1rem 1.15rem;
@@ -69,9 +68,9 @@ header h1::before {
 
 footer {
     background: linear-gradient(90deg,
-            var(--drc-blue-navy) 0%,
-            var(--drc-blue-deep) 65%,
-            var(--drc-red-dark) 100%);
+        var(--drc-blue-navy) 0%,
+        var(--drc-blue-deep) 65%,
+        var(--drc-red-dark) 100%);
     color: #ffffff;
     text-align: center;
     padding: 1rem;
@@ -79,7 +78,7 @@ footer {
 }
 
 footer p {
-    margin: 0;
+    margin: 0.2rem 0;
     font-size: 0.92rem;
 }
 
@@ -102,7 +101,6 @@ main {
     box-shadow: 0 10px 28px rgba(0, 71, 153, 0.14);
 }
 
-/* Tri-color DRC ribbon bar across the top of the form card */
 .review-form::before,
 .confirmation-card::before {
     content: "";
@@ -217,7 +215,7 @@ a:focus-visible {
     padding: 0.6rem 0.25rem;
     margin-bottom: 0;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-align: center;
     color: var(--drc-blue-navy);
     background: linear-gradient(180deg, #ffffff 0%, #fef9c3 100%);
@@ -253,9 +251,10 @@ a:focus-visible {
     gap: 0.55rem;
 }
 
-.checkbox-item {
+.checkbox-list .checkbox-item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 0.6rem;
     padding: 0.5rem 0.65rem;
     margin-bottom: 0;
@@ -268,27 +267,29 @@ a:focus-visible {
     transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.checkbox-item:hover {
+.checkbox-list .checkbox-item:hover {
     border-color: var(--drc-red);
     background-color: #fefce8;
 }
 
-.checkbox-item input[type="checkbox"] {
+.checkbox-list .checkbox-item input[type="checkbox"] {
     width: 1.15rem;
     height: 1.15rem;
     margin: 0;
+    flex-shrink: 0;
     accent-color: var(--drc-red);
     cursor: pointer;
 }
 
-/* Bold DRC Flag Diagonal Gradient Submit Button */
+input[type="submit"],
 .submit-btn,
 .back-link {
-    display: inline-block;
+    display: block;
     width: 100%;
     padding: 0.9rem 1.25rem;
     font-size: 1.05rem;
     font-weight: 800;
+    font-family: inherit;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-align: center;
@@ -296,9 +297,9 @@ a:focus-visible {
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
     background: linear-gradient(115deg,
-        var(--drc-blue-navy) 0%,
-        var(--drc-blue-deep) 45%,
-        var(--drc-red-dark) 100%);
+            var(--drc-blue-navy) 0%,
+            var(--drc-blue-deep) 45%,
+            var(--drc-red-dark) 100%);
     border: 2px solid var(--drc-yellow);
     border-radius: 8px;
     cursor: pointer;
@@ -306,6 +307,7 @@ a:focus-visible {
     transition: transform 0.15s ease, filter 0.15s ease;
 }
 
+input[type="submit"]:hover,
 .submit-btn:hover,
 .back-link:hover {
     filter: brightness(1.08);
