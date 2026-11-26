@@ -35,18 +35,19 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-page-top);
     background: linear-gradient(135deg,
-        var(--bg-page-top) 0%,
-        var(--bg-page-mid) 50%,
-        var(--bg-page-bottom) 100%);
+            var(--bg-page-top) 0%,
+            var(--bg-page-mid) 50%,
+            var(--bg-page-bottom) 100%);
 }
 
-
 header {
+    background-color: var(--drc-blue-navy);
     background: linear-gradient(115deg,
-        var(--drc-blue-navy) 0%,
-        var(--drc-blue-deep) 58%,
-        var(--drc-red-dark) 100%);
+            var(--drc-blue-navy) 0%,
+            var(--drc-blue-deep) 58%,
+            var(--drc-red-dark) 100%);
     color: #ffffff;
     text-align: center;
     padding: 1.35rem 1rem 1.15rem;
@@ -67,10 +68,11 @@ header h1::before {
 }
 
 footer {
+    background-color: var(--drc-blue-navy);
     background: linear-gradient(90deg,
-        var(--drc-blue-navy) 0%,
-        var(--drc-blue-deep) 65%,
-        var(--drc-red-dark) 100%);
+            var(--drc-blue-navy) 0%,
+            var(--drc-blue-deep) 65%,
+            var(--drc-red-dark) 100%);
     color: #ffffff;
     text-align: center;
     padding: 1rem;
@@ -86,21 +88,24 @@ main {
     flex: 1;
     width: 100%;
     max-width: 660px;
-    margin: 1.75rem auto;
-    padding: 0 1rem;
+    margin: 1.5rem auto;
+    padding: 0 0.85rem;
 }
 
 .review-form,
 .confirmation-card {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    background-color: var(--bg-card);
     background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
     border: 2px solid var(--drc-blue-deep);
     border-radius: var(--radius);
-    padding: 1.75rem 1.5rem 1.5rem;
+    padding: 1.5rem 1rem 1.25rem;
     box-shadow: 0 10px 28px rgba(0, 71, 153, 0.14);
 }
 
+/* Tri-color DRC ribbon bar across the top of the form card */
 .review-form::before,
 .confirmation-card::before {
     content: "";
@@ -127,25 +132,34 @@ main {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--drc-blue-navy);
+    background-color: #e0f2fe;
     background: linear-gradient(90deg, #e0f2fe 0%, #fef9c3 100%);
     border-left: 4px solid var(--drc-red);
     border-radius: 6px;
 }
 
+.req,
 .req-marker {
     color: var(--drc-red-dark);
     font-weight: 800;
 }
 
+.optional,
 .optional-tag {
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--text-muted);
 }
 
+/* Prevent fieldset/legend overflow on narrow mobile screens */
+fieldset,
+.form-group,
 .field-group {
-    margin-bottom: 1.3rem;
+    min-width: 0;
+    width: 100%;
+    margin: 0 0 1.25rem 0;
     padding: 0.85rem;
+    background-color: var(--bg-card);
     background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%);
     border: 1px solid #bfdbfe;
     border-left: 4px solid var(--drc-blue-deep);
@@ -155,6 +169,8 @@ main {
 label,
 legend {
     display: block;
+    max-width: 100%;
+    white-space: normal;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--drc-blue-navy);
@@ -169,6 +185,7 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
+    max-width: 100%;
     padding: 0.7rem 0.8rem;
     font-size: 1rem;
     font-family: inherit;
@@ -176,7 +193,7 @@ textarea {
     background-color: #ffffff;
     border: 1.5px solid var(--drc-blue-deep);
     border-radius: 6px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
 input[type="text"]:hover,
@@ -200,43 +217,54 @@ a:focus-visible {
     box-shadow: 0 0 0 5px rgba(247, 214, 24, 0.55);
 }
 
+/* Overall Rating Grid */
+.rating-grid,
 .rating-options {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.35rem;
+    width: 100%;
 }
 
+.rating-item,
 .rating-option {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
-    padding: 0.6rem 0.25rem;
+    min-width: 0;
+    padding: 0.55rem 0.15rem;
     margin-bottom: 0;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     text-align: center;
     color: var(--drc-blue-navy);
+    background-color: #fef9c3;
     background: linear-gradient(180deg, #ffffff 0%, #fef9c3 100%);
     border: 1.5px solid var(--drc-blue-deep);
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
+.rating-item:hover,
 .rating-option:hover {
     border-color: var(--drc-red);
+    background-color: #fef08a;
     background: linear-gradient(180deg, #fef08a 0%, #fde047 100%);
     transform: translateY(-1px);
 }
 
+.rating-item:has(input:checked),
 .rating-option:has(input:checked) {
+    background-color: var(--drc-blue-navy);
     background: linear-gradient(135deg, var(--drc-blue-navy) 0%, var(--drc-blue-deep) 100%);
     color: var(--drc-yellow);
     border-color: var(--drc-red);
 }
 
+.rating-item input[type="radio"],
 .rating-option input[type="radio"] {
     margin: 0;
     width: 1.1rem;
@@ -245,18 +273,24 @@ a:focus-visible {
     cursor: pointer;
 }
 
+/* Useful Features Checkboxes: 1 column on mobile, 2 columns on desktop */
+.checkbox-group,
 .checkbox-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.55rem;
+    width: 100%;
 }
 
+.checkbox-group .checkbox-item,
 .checkbox-list .checkbox-item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.6rem;
-    padding: 0.5rem 0.65rem;
+    gap: 0.65rem;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
     margin-bottom: 0;
     font-weight: 600;
     color: var(--drc-blue-navy);
@@ -264,14 +298,16 @@ a:focus-visible {
     border: 1px solid #bfdbfe;
     border-radius: 6px;
     cursor: pointer;
-    transition: border-color 0.15s ease, background-color 0.15s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
+.checkbox-group .checkbox-item:hover,
 .checkbox-list .checkbox-item:hover {
     border-color: var(--drc-red);
     background-color: #fefce8;
 }
 
+.checkbox-group .checkbox-item input[type="checkbox"],
 .checkbox-list .checkbox-item input[type="checkbox"] {
     width: 1.15rem;
     height: 1.15rem;
@@ -281,6 +317,7 @@ a:focus-visible {
     cursor: pointer;
 }
 
+/* Full-width Submit & Back Buttons */
 input[type="submit"],
 .submit-btn,
 .back-link {
@@ -296,6 +333,7 @@ input[type="submit"],
     text-decoration: none;
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+    background-color: var(--drc-blue-navy);
     background: linear-gradient(115deg,
             var(--drc-blue-navy) 0%,
             var(--drc-blue-deep) 45%,
@@ -314,6 +352,7 @@ input[type="submit"]:hover,
     transform: translateY(-1px);
 }
 
+/* Confirmation Card (review.html) */
 .confirmation-card {
     text-align: center;
 }
@@ -328,6 +367,7 @@ input[type="submit"]:hover,
     padding: 0.75rem 1.25rem;
     font-size: 1.15rem;
     color: var(--drc-blue-navy);
+    background-color: #fef9c3;
     background: linear-gradient(90deg, #e0f2fe 0%, #fef9c3 50%, #fee2e2 100%);
     border: 2px solid var(--drc-blue-deep);
     border-radius: 8px;
@@ -339,7 +379,30 @@ input[type="submit"]:hover,
     font-size: 1.35rem;
 }
 
+/* Tablet & Desktop Adjustments */
 @media (min-width: 600px) {
+    main {
+        margin: 1.75rem auto;
+        padding: 0 1rem;
+    }
+
+    .review-form,
+    .confirmation-card {
+        padding: 1.75rem 1.5rem 1.5rem;
+    }
+
+    .rating-grid,
+    .rating-options {
+        gap: 0.5rem;
+    }
+
+    .rating-item,
+    .rating-option {
+        padding: 0.6rem 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .checkbox-group,
     .checkbox-list {
         grid-template-columns: repeat(2, 1fr);
     }
